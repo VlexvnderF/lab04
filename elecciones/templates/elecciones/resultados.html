@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Candidatos</title>
+</head>
+<body align="center">
+    <h1>Lista Candidatos
+        
+    </h1>
+    
+    {% if list_cand %}
+        <table align="center" cellspacing="5" border="2">
+            <tr>
+                <td>NOMBRE</td>
+                <td>APELLIDO</td>
+                <td>EDAD</td>
+            </tr>
+            {% for region in list_cand %}
+            
+            <tr>
+                <td>{{region.nom_cand}}</td>
+                <td>{{region.ape_cand}}</td>
+                <td>{{region.edad_cand}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+
+    <p>No existen registros de Candidatos</p>
+    {% endif %}
+</html>
